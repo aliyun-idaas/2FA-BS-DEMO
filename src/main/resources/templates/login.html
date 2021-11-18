@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+</head>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    .loginForm { width: 360px; margin: 80px auto 0; padding: 40px; background-color: #fff;}
+    .block { display: block;}
+    .control { width: 100%; padding: 6px; margin-bottom: 10px;}
+    .btn { width: 100%; padding: 6px 20px;}
+    .title { margin: 0 0 25px;}
+    .text-center{ text-align: center;}
+</style>
+
+<body>
+<form action="login" method="post" class="loginForm">
+    <h3 class="title text-center">业务系统登录</h3>
+    <!-- 默认账号密码 test/Jzyt@2018-->
+    <input class="block control" name="username" type="text" placeholder="请输入账户名"/>
+    <input class="block control" name="password" type="password" placeholder="请输入密码"/>
+    <p>演示默认密码为：Jzyt@2018</p>
+    <input class="btn" type="submit" value="登 录"/>
+</form>
+</body>
+</html>

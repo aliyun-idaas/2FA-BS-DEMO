@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.springframework.org/schema/mvc">
+<head>
+    <meta charset="UTF-8">
+    <title>OTP</title>
+</head>
+
+<style>
+    *{ box-sizing: border-box;}
+    html, body { background-color: #EFEFEF;}
+    p { margin: 0 0 10px;}
+
+    #MfaBindContainer { margin: 80px auto 0; background-color: #fff;}
+    #MfaAuthContainer { height: auto!important;  margin: 80px auto 0!important; padding: 40px;}
+</style>
+
+<body>
+
+<!--静态引入js方式，适用于Thymeleaf、FreeMarker、jsp等能够获取到后端传递的用户名，并动态修改js地址的情况-->
+<!--<script th:src="@{'https://2fa.idpsso.net:8443/2FA/public/mfa/bs/v1/javascript/test1234.jsx?state=test&encryptedUsername=' + ${username}}"></script>-->
+<!--<script>new IdpMFA();</script>-->
+
+<!--动态引入js方式，适用于前后端分离等不能静态引入动态js地址的情况-->
+<script>
+    var username = "[[${username}]]"; // 获取到后端传递的经过 AES加密 并使用 URL编码 后的用户名
+    var script = document.createElement("script");
+    script.src = "[[${mfaJsUri}]]?state=test&encryptedUsername=" + username;
+    document.body.appendChild(script);
+    window.onload = function () {
+        new IdpMFA();
+    }
+</script>
+
+</body>
+</html>

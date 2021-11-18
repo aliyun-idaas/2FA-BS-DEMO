@@ -1,0 +1,12 @@
+${AnsiColor.BRIGHT_GREEN}
+ _______  _______  _______
+/ ___   )(  ____ \(  ___  )
+\/   )  || (    \/| (   ) |
+    /   )| (__    | (___) |
+  _/   / |  __)   |  ___  |
+ /   _/  | (      | (   ) |
+(   (__/\| )      | )   ( |
+\_______/|/       |/     \|
+
+IDsManager 2FA: ${application.formatted-version}
+Spring Boot: ${spring-boot.formatted-version}
