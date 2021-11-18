@@ -1,6 +1,8 @@
 # 2FA-BS-DEMO
 2FA中用于B/S应用JS集成的演示和集成参考 。
 
+开源协议：[GPL-3.0 License](https://github.com/aliyun-idaas/2FA-BS-DEMO/blob/main/LICENSE) 。
+
 ## 开发环境要求
 - Java  v1.8+
 - Maven 3.3+
