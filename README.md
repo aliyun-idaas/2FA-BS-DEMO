@@ -3,6 +3,11 @@
 
 开源协议：[GPL-3.0 License](https://github.com/aliyun-idaas/2FA-BS-DEMO/blob/main/LICENSE) 。
 
+
+## 效果展示
+![mfa-otp.gif](./relation/mfa-otp.gif)
+
+
 ## 开发环境要求
 - Java  v1.8+
 - Maven 3.3+
