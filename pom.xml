@@ -72,7 +72,7 @@
                 <configuration>
                     <failOnMissingWebXml>false</failOnMissingWebXml>
                     <!--<warSourceExcludes>*/classes/2fa.properties</warSourceExcludes>-->
-                    <!--<packagingExcludes>*/classes/2fa.properties</packagingExcludes>-->
+                    <packagingExcludes>*/classes/application.properties</packagingExcludes>
                     <archive>
                         <addMavenDescriptor>false</addMavenDescriptor>
                         <manifestEntries>
