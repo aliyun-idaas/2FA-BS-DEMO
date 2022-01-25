@@ -56,7 +56,6 @@ public class IndexController {
 
     /**
      * 引导登录
-     *
      */
     @GetMapping("/")
     public String index() {
@@ -83,7 +82,7 @@ public class IndexController {
     @GetMapping("/otp")
     public String otp(Model model, HttpSession session) throws Exception {
         String username = (String) session.getAttribute("username");
-        if (StringUtils.isEmpty(username)) {
+        if (!StringUtils.hasLength(username)) {
             return "redirect:/";
         }
         model.addAttribute("username", URLEncoder.encode(AESUtils.aesEncrypt(username, mfaAesKey), "UTF-8"));
@@ -94,16 +93,25 @@ public class IndexController {
 
     /**
      * 2FA中 B/S应用 回调地址
+     *
+     * code值说明：
+     * 1461：B/S应用未启用
+     * 1462：二次认证成功
+     * 1463：未验证通过
+     * 1464：未验证通过的请求参数
+     * 1465：用户取消了二次验证
      */
     @GetMapping("/public/otp/callback")
     public String otpCallback(String callBackParams, HttpSession session) throws Exception {
         String callBack = AESUtils.aesDecrypt(callBackParams, mfaAesKey);
         Map map = JSON.parseObject(callBack, Map.class);
         Integer code = (Integer) map.get("code");
+        // 1462：二次认证成功
         if (code != null && code == 1462) {
             session.setAttribute("username", map.get("username"));
             session.setAttribute("otp", 2);
             return "redirect:/welcome";
+            // 1465：用户取消了二次验证
         } else if (code != null && code == 1465) {
             session.setAttribute("otp", 0);
             return "redirect:/";
