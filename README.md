@@ -14,7 +14,7 @@
 - 字符编码：UTF-8
 
 ## 使用框架与版本
-- Spring-Boot  v2.0.2.RELEASE
+- Spring-Boot  v2.4.2
 - fastjson v1.2.78
 
 
