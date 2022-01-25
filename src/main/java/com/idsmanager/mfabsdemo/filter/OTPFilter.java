@@ -46,12 +46,12 @@ public class OTPFilter implements Filter {
             String servletPath = httpServletRequest.getServletPath();
             if (otp == 0) {
                 if (!"/".equals(servletPath) && !"/login".equals(servletPath)) {
-                    httpServletResponse.sendRedirect("/" + contextPath + "/");
+                    httpServletResponse.sendRedirect(contextPath + "/");
                     return;
                 }
             } else {
                 if (!"/otp".equals(servletPath) && !"/public/otp/callback".equals(servletPath)) {
-                    httpServletResponse.sendRedirect("/" + contextPath + "/otp");
+                    httpServletResponse.sendRedirect(contextPath + "/otp");
                     return;
                 }
             }
