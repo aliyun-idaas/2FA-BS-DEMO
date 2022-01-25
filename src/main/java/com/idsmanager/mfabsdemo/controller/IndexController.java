@@ -93,7 +93,7 @@ public class IndexController {
 
     /**
      * 2FA中 B/S应用 回调地址
-     *
+     * <p>
      * code值说明：
      * 1461：B/S应用未启用
      * 1462：二次认证成功
@@ -129,4 +129,17 @@ public class IndexController {
     public String welcome() {
         return "welcome";
     }
+
+
+    /**
+     * 一个退出的示例,(清除会话)
+     *
+     * @since 1.0.0
+     */
+    @GetMapping("logout")
+    public String logout(HttpSession session) {
+        session.invalidate();
+        return "redirect:/";
+    }
+
 }
