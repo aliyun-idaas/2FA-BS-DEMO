@@ -50,7 +50,7 @@ public class IndexController {
     @Value("${mfa.aes.key:D6zyFzz1NnlXDOEq}")
     private String mfaAesKey;
 
-    @Value("${bs.demo.default.password:Jzyt@2018}")
+    @Value("${bs.demo.default.password:2FADemo_2022}")
     private String defaultPwd;
 
 
@@ -58,7 +58,8 @@ public class IndexController {
      * 引导登录
      */
     @GetMapping("/")
-    public String index() {
+    public String index(Model model) {
+        model.addAttribute("defaultPwd", defaultPwd);
         return "login";
     }
 
