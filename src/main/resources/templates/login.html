@@ -16,6 +16,7 @@
     .btn { width: 100%; padding: 6px 20px;}
     .title { margin: 0 0 25px;}
     .text-center{ text-align: center;}
+    .tooltip{  color: darkgray;}
 </style>
 
 <body>
@@ -25,7 +26,7 @@
     <input class="block control" name="username" type="text" placeholder="请输入账户名" required="required"/>
     <input class="block control" name="password" type="password" placeholder="请输入密码" required="required"/>
     <!--<p>演示默认密码为：Jzyt@2018</p>-->
-    <p>账户名可以自定义，密码统一使用默认密码：Jzyt@2018，动态口令（OTP）通过2FA页面扫码获取
+    <p class="tooltip">账户名可以自定义，密码统一使用默认密码：Jzyt@2018，动态口令（OTP）通过2FA页面扫码获取
         （登录成功以后会自动在2FA控制台创建）</p>
     <input class="btn" type="submit" value="登 录"/>
 </form>
