@@ -3,31 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <title>登录</title>
+    <link rel="stylesheet" href="../css/public.css">
 </head>
 
 <style>
-    * {
-        box-sizing: border-box;
+    .loginForm {
+        width: 300px;
+        background-color: #fff;
+        margin: 0 auto;
     }
-
-    .loginForm { width: 360px; margin: 80px auto 0; padding: 40px; background-color: #fff;}
-    .block { display: block;}
-    .control { width: 100%; padding: 6px; margin-bottom: 10px;}
-    .btn { width: 100%; padding: 6px 20px;}
-    .title { margin: 0 0 25px;}
-    .text-center{ text-align: center;}
-    .tooltip{  color: darkgray;}
+    .title {
+        margin: 0 0 60px;
+        font-size: 22px;
+        color: rgba(0,0,0,0.85);
+    }
+    .input-wrap {
+        border: 1px solid #dcdcdc;
+        margin-bottom: 20px;
+        height: 36px;
+        line-height: 36px;
+        overflow: hidden;
+        display: flex;
+    }
+    .input-wrap .input-suffix {
+        display: inline-block;
+        width: 36px;
+        height: 36px;
+        background: #6d8484;
+        float: left;
+    }
+    .input-wrap .user-suffix {
+        background: url("../img/username.png") center center no-repeat;
+        background-size: auto 16px;
+    }
+    .input-wrap .pwd-suffix {
+        background: url("../img/password.png") center center no-repeat;
+        background-size: auto 16px;
+    }
+    .input-wrap input {
+        border: none;
+        height: 36px;
+        line-height: 36px;
+        outline: none;
+        padding: 6px 6px 6px 0;
+        display: block;
+        width: 100%;
+        /*background: #EFEFEF;*/
+    }
+    .input-wrap input::placeholder {
+        color: #a3a3a3;
+    }
 </style>
 
 <body>
-<form action="login" method="post" class="loginForm">
-    <h3 class="title text-center">业务系统登录</h3>
-    <input class="block control" name="username" type="text" placeholder="请输入账户名" required="required"/>
-    <input class="block control" name="password" type="password" placeholder="请输入密码" required="required"/>
+<div class="box">
+    <div class="left">
+        <div>
+            <img src="../img/login-pic.png" alt="" class="logo">
+            <p class="left-tips">此系统为演示系统。为方便演示，做了特殊处理。首次登录时，输入任意账户名+ 默认密码（<span th:text="${defaultPwd}"></span>），即可自动在后台创建用户信息。
+                并绑定手机令牌后，即可在后台创建用户信息</p>
+        </div>
+    </div>
+    <div class="right">
+        <div>
+            <form action="login" method="post" class="loginForm">
+                <h3 class="title">BS应用双因素认证演示系统</h3>
+                <div class="input-wrap">
+                    <i class="input-suffix user-suffix"></i>
+                    <input name="username" type="text" placeholder="请输入账户名" required="required"/>
+                </div>
 
-    <p class="tooltip">此系统为演示系统。输入任意账户名+ 默认密码（<span th:text="${defaultPwd}"></span>），即可自动在后台创建用户信息。
-        使用手机APP（九州云腾IDP认证管家、阿里云APP等）扫描二维码，绑定后即可体验应用的二次认证能力。</p>
-    <input class="btn" type="submit" value="登 录"/>
-</form>
+                <div class="input-wrap">
+                    <i class="input-suffix pwd-suffix"></i>
+                    <input name="password" type="password" placeholder="请输入默认密码" required="required"/>
+                </div>
+
+
+
+                <input class="btn" type="submit" value="登 录"/>
+            </form>
+        </div>
+    </div>
+</div>
+
 </body>
 </html>
