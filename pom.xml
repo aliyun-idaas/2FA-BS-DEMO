@@ -11,7 +11,7 @@
 
     <groupId>com.idsmanager</groupId>
     <artifactId>2FA-BS-DEMO</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <name>${project.artifactId}</name>
     <packaging>war</packaging>
     <description>Demo project for 2FA BS Application</description>
