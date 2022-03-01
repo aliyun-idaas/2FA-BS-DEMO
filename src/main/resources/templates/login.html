@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html  lang="en"  xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>登录</title>
-    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../public/css/public.css"  th:href="@{/css/public.css}"/>
 </head>
 
 <style>
@@ -59,9 +59,9 @@
 <div class="box">
     <div class="left">
         <div>
-            <img src="../img/login-pic.png" alt="" class="logo">
-            <p class="left-tips">此系统为演示系统。为方便演示，做了特殊处理。首次登录时，输入任意账户名+ 默认密码（<span th:text="${defaultPwd}"></span>），即可自动在后台创建用户信息。
-                并绑定手机令牌后，即可在后台创建用户信息</p>
+            <img src="../public/img/login-pic.png"  th:src="@{/img/login-pic.png}" alt="" class="logo">
+            <p class="left-tips">此系统为演示系统。为方便演示，做了特殊处理。首次登录时，输入任意账户名+ 默认密码（<strong th:text="${defaultPwd}"></strong>），
+                即可自动在后台创建用户信息。 并绑定手机令牌后，即可在后台创建用户信息</p>
         </div>
     </div>
     <div class="right">

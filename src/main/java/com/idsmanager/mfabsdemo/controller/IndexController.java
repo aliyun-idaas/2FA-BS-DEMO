@@ -67,12 +67,13 @@ public class IndexController {
      * 提交登录
      */
     @PostMapping("/login")
-    public String login(String username, String password, HttpSession session) {
+    public String login(String username, String password, HttpSession session, Model model) {
         if (defaultPwd.equals(password)) {
             session.setAttribute("username", username);
             session.setAttribute("otp", 1);
             return "redirect:/otp";
         }
+        model.addAttribute("error", "invalid_pwd");
         return "redirect:/";
     }
 

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html  lang="en"  xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Welcome</title>
-    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../public/css/public.css" th:href="@{/css/public.css}"/>
 </head>
 
 <style>
@@ -26,13 +26,13 @@
     <div class="box">
         <div class="left">
             <div>
-                <img src="../img/welcome-pic.png" alt="" class="logo">
+                <img src="../public/img/welcome-pic.png" th:src="@{/img/welcome-pic.png}" alt="" class="logo"/>
                 <p class="left-tips">您已成功登录业务系统，点击退出，可再次体验BS应用的双因素认证流程</p>
             </div>
         </div>
         <div class="right">
             <div>
-                <img src="../img/icon-finish.png" alt="" class="icon-finish">
+                <img src="../public/img/icon-finish.png" th:src="@{/img/icon-finish.png}" alt="" class="icon-finish"/>
                 <h3 class="title">Welcome！</h3>
                 <p class="content"><span th:text="${session.username}"></span>，欢迎登录业务系统。</p>
                 <a href="/" th:href="@{/logout}" class="btn">退出</a>
