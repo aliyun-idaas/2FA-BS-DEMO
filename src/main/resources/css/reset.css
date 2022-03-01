@@ -1,0 +1,113 @@
+.left-code-wrap {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    width: 300px;
+}
+.left-code-wrap img {
+    height: 60px;
+    width: 60px;
+}
+.left-code-wrap .split {
+    width: 1px;
+    height: 55px;
+    background-color: rgba(255, 255, 255, 0.56);
+    margin-left: 33px;
+    margin-right: 33px;
+}
+.right-inner {
+    padding-top: 40px !important;
+}
+.header {
+    margin-bottom: 20px !important;
+}
+.header .title {
+    color: rgba(0,0,0,0.85) !important;
+    font-weight: bolder;
+}
+.mfa-tit-tips {
+    color: rgba(0,0,0,0.85) !important;
+}
+.mfa-otp-container {
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    height: 100%;
+}
+.mfa-img-con {
+    width: 150px !important;
+    height: 150px !important;
+}
+.mfa-opt-code {
+    border: 1px solid #dcdcdc !important;
+    height: 36px;
+    line-height: 36px;
+    outline: none;
+    padding: 6px 6px 6px 0;
+    display: block;
+    margin: 0 auto;
+    width: 300px;
+}
+
+.mfa-footer {
+    background-color: transparent !important;
+    position: relative !important;
+    border-bottom: none !important;
+}
+.mfa-footer button {
+    display: inline-block;
+    width: 300px;
+    height: 34px;
+    line-height: 34px;
+    background-image: linear-gradient(180deg, #007BA7 0%, #00456E 100%) !important;
+    border-radius: 4px;
+    color: #ffffff;
+    margin-top: 20px;
+    text-decoration: none;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.inner-normal {
+    padding-top: 80px !important;
+}
+.mfa-auth-container {
+    background-color: transparent !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    height: 100%;
+}
+.mfa-auth-form {
+    width: 300px !important;
+}
+.mfa-tit-tips {
+    margin: 40px 0px 20px 0 !important;
+}
+.mfa-auth-otp {
+    border: 1px solid #dcdcdc !important;
+    height: 36px;
+    line-height: 36px;
+    outline: none;
+    padding: 6px 6px 6px 0;
+    display: block;
+    margin: 0 auto;
+    width: 300px;
+}
+.mfa-cancel {
+    display: inline-block;
+    width: 300px;
+    height: 34px;
+    line-height: 34px;
+    background-image: linear-gradient(180deg, #007BA7 0%, #00456E 100%) !important;
+    border-radius: 4px;
+    color: #ffffff;
+    margin-top: 20px;
+    text-decoration: none;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
