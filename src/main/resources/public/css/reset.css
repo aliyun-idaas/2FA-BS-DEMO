@@ -97,7 +97,7 @@
     width: 300px !important;
 }
 .mfa-cancel {
-    display: inline-block;
+    display: inline-block !important;
     width: 300px !important;
     height: 34px !important;
     line-height: 34px !important;
