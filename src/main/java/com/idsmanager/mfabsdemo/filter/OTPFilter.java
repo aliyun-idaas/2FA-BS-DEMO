@@ -18,6 +18,7 @@ import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.Locale;
 
 /**
  * @since 1.0.0
@@ -38,6 +39,16 @@ public class OTPFilter implements Filter {
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
         HttpServletRequest httpServletRequest = (HttpServletRequest) servletRequest;
         HttpServletResponse httpServletResponse = (HttpServletResponse) servletResponse;
+
+        //忽略掉 css, img   v1.0.1
+        String requestURI = httpServletRequest.getRequestURI().toLowerCase(Locale.ROOT);
+        if (requestURI.endsWith("css")
+                || requestURI.endsWith("png")
+                || requestURI.endsWith("jpeg")
+                || requestURI.endsWith("jpg")) {
+            filterChain.doFilter(servletRequest, servletResponse);
+            return;
+        }
 
         String contextPath = httpServletRequest.getContextPath();
         Object otpO = httpServletRequest.getSession().getAttribute("otp");
