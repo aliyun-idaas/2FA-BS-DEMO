@@ -29,6 +29,7 @@ body {
     height: 100%;
     /*background: url("../img/background.png");*/
     background-size: 100% 100%;
+    display: block !important;
 }
 .left>div {
     padding: 0 40px;
