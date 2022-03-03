@@ -4,62 +4,14 @@
     <meta charset="UTF-8">
     <title>登录</title>
     <link rel="stylesheet" href="../public/css/public.css"  th:href="@{/css/public.css}"/>
+    <link rel="stylesheet" href="../public/css/login.css" th:href="@{/css/login.css}"/>
 </head>
-
-<style>
-    .loginForm {
-        width: 300px;
-        background-color: #fff;
-        margin: 0 auto;
-    }
-    .title {
-        margin: 0 0 60px;
-        font-size: 22px;
-        color: rgba(0,0,0,0.85);
-    }
-    .input-wrap {
-        border: 1px solid #dcdcdc;
-        margin-bottom: 20px;
-        height: 36px;
-        line-height: 36px;
-        overflow: hidden;
-        display: flex;
-    }
-    .input-wrap .input-suffix {
-        display: inline-block;
-        width: 36px;
-        height: 36px;
-        background: #6d8484;
-        float: left;
-    }
-    .input-wrap .user-suffix {
-        background: url("../public/img/username.png") center center no-repeat;
-        background-size: auto 16px;
-    }
-    .input-wrap .pwd-suffix {
-        background: url("../public/img/password.png") center center no-repeat;
-        background-size: auto 16px;
-    }
-    .input-wrap input {
-        border: none;
-        height: 36px;
-        line-height: 36px;
-        outline: none;
-        padding: 6px 6px 6px 0;
-        display: block;
-        width: 100%;
-        /*background: #EFEFEF;*/
-    }
-    .input-wrap input::placeholder {
-        color: #a3a3a3;
-    }
-</style>
 
 <body>
 <div class="box">
     <div class="left">
         <div>
-            <img src="../public/img/login-pic.png"  th:src="@{/img/login-pic.png}" alt="" class="logo">
+            <img src="../public/img/login-pic.png"  th:src="@{/img/login-pic.png}" alt="" class="logo" />
             <p class="left-tips">此系统为演示系统。为方便演示，做了特殊处理。首次登录时，输入任意账户名+ 默认密码（<strong th:text="${defaultPwd}"></strong>），
                 即可自动在后台创建用户信息。 并绑定手机令牌后，即可在后台创建用户信息</p>
         </div>
