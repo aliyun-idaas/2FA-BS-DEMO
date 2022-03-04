@@ -18,6 +18,19 @@
 
 <body>
 
+<div class="box">
+    <div class="left">
+        <div>
+            <img src="../public/img/otp-pic.png" th:src="@{/img/otp-pic.png}" class="logo" />
+            <p class="left-tips">您正在进行双因子认证，请输入动态口令进行验证</p>
+        </div>
+    </div>
+
+    <div class="right">
+        <div class="right-inner" id="right-inner"></div>
+    </div>
+</div>
+
 <!--静态引入js方式，适用于Thymeleaf、FreeMarker、jsp等能够获取到后端传递的用户名，并动态修改js地址的情况-->
 <!--<script th:src="@{'https://2fa.idpsso.net:8443/2FA/public/mfa/bs/v1/javascript/test1234.jsx?state=test&encryptedUsername=' + ${username}}"></script>-->
 <!--<script>new IdpMFA();</script>-->
@@ -29,7 +42,7 @@
     script.src = "[[${mfaJsUri}]]?state=test&encryptedUsername=" + username;
     document.body.appendChild(script);
     window.onload = function () {
-        new IdpMFA();
+        new IdpMFA({id: 'right-inner'});
     }
 </script>
 
