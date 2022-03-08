@@ -14,6 +14,29 @@
 
     #MfaBindContainer { margin: 80px auto 0; background-color: #fff;}
     #MfaAuthContainer { height: auto!important;  margin: 80px auto 0!important; padding: 40px;}
+    .left-code {
+        text-align: left;
+    }
+    .img-line {
+        text-align: center;
+    }
+    .left-code img {
+        width: 68px;
+
+    }
+    .left-code .img-box + .img-box {
+        margin-left: 65px;
+    }
+    .img-line {
+        display: flex;
+        justify-content: center;
+    }
+    .img-line p {
+        color: #ffffff;
+        font-size: 12px;
+        text-align: center;
+        margin-bottom: 2px;
+    }
 </style>
 
 <body>
@@ -22,7 +45,27 @@
     <div class="left">
         <div>
             <img src="../public/img/otp-pic.png" th:src="@{/img/otp-pic.png}" class="logo" />
-            <p class="left-tips">您正在进行双因子认证，请输入动态口令进行验证</p>
+            <div>
+                <p class="left-tips">对于新创建的账户，需要先扫描右侧二维码，绑定手机令牌。九州云腾双因素认证产品，支持各类手机令牌（IDP认证管家、阿里云app等，扫描下方二维码，即可下载手机令牌），以及各种硬件令牌（演示环境不支持绑定）。</p>
+                <p class="left-tips">对于已经绑定令牌的账户，请直接输入6位动态口令。</p>
+
+
+            <div class="left-code">
+                <div class="img-line">
+                    <div class="img-box">
+                        <img src="../public/img/code2.png" th:src="@{/img/code2.png}" />
+                        <p>扫码下载</p>
+                        <p>IDP认证管家</p>
+                    </div>
+                    <div class="img-box">
+                        <img src="../public/img/code1.png" th:src="@{/img/code1.png}" />
+                        <p>扫码下载</p>
+                        <p>阿里云app</p>
+                    </div>
+                </div>
+            </div>
+
+            </div>
         </div>
     </div>
 

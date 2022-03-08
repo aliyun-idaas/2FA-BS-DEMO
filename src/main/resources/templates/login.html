@@ -12,14 +12,20 @@
     <div class="left">
         <div>
             <img src="../public/img/login-pic.png"  th:src="@{/img/login-pic.png}" alt="" class="logo" />
-            <p class="left-tips">此系统为演示系统。为方便演示，做了特殊处理。首次登录时，输入任意账户名+ 默认密码（<strong th:text="${defaultPwd}"></strong>），
-                即可自动在后台创建用户信息。 并绑定手机令牌后，即可在后台创建用户信息</p>
+<!--            <p class="left-tips">此系统为演示系统。为方便演示，做了特殊处理。首次登录时，输入任意账户名+ 默认密码（<strong th:text="${defaultPwd}"></strong>），-->
+<!--                即可自动在后台创建用户信息。 并绑定手机令牌后，即可在后台创建用户信息</p>-->
+            <p class="left-tips">
+                <p class="left-tips">此系统为演示系统，为方便演示，做了特殊处理。</p>
+                <p class="left-tips">首次登录时，输入任意账户名+默认密码（<strong th:text="${defaultPwd}"></strong>），并绑定手机令牌后， 即可自动在后台创建用户信息。</p>
+                <p class="left-tips">后续使用该用户名+默认密码，并验证手机令牌后，即可登录。</p>
+
+            </p>
         </div>
     </div>
     <div class="right">
         <div>
             <form action="login" method="post" class="loginForm">
-                <h3 class="title">BS应用双因素认证演示系统</h3>
+                <h3 class="title">B/S应用双因素认证演示系统</h3>
                 <div class="input-wrap">
                     <i class="input-suffix user-suffix"></i>
                     <input name="username" type="text" placeholder="请输入账户名" required="required"/>

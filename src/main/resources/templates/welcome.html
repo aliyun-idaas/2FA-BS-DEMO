@@ -27,14 +27,17 @@
         <div class="left">
             <div>
                 <img src="../public/img/welcome-pic.png" th:src="@{/img/welcome-pic.png}" alt="" class="logo"/>
-                <p class="left-tips">您已成功登录业务系统，点击退出，可再次体验BS应用的双因素认证流程</p>
+                <p class="left-tips">
+                <p class="left-tips">您已成功登录B/S应用系统，点击退出，可再次体验B/S应用的双因素认证流程。</p>
+                <p class="left-tips">九州云腾双因素认证产品，支持对各类B/S应用，在传统账户名+静态密码的基础上，增加双因素认证能力，提升系统安全性，满足等保合规需求。</p>
+                </p>
             </div>
         </div>
         <div class="right">
             <div>
                 <img src="../public/img/icon-finish.png" th:src="@{/img/icon-finish.png}" alt="" class="icon-finish"/>
                 <h3 class="title">Welcome！</h3>
-                <p class="content"><span th:text="${session.username}"></span>，欢迎登录业务系统。</p>
+                <p class="content"><span th:text="${session.username}"></span>，欢迎登录B/S应用系统。</p>
                 <a href="/" th:href="@{/logout}" class="btn">退出</a>
             </div>
         </div>
