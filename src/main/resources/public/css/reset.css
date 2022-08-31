@@ -1,5 +1,5 @@
 .right-inner {
-    padding-top: 40px !important;
+    /*padding-top: 40px !important;*/
 }
 .header {
     margin-bottom: 20px !important;
@@ -24,13 +24,13 @@
 }
 .mfa-opt-code {
     border: 1px solid #dcdcdc !important;
-    height: 36px !important;
+    /*height: 36px !important;*/
     line-height: 36px !important;
     outline: none !important;
     padding: 6px 6px 6px 0 !important;
     display: block !important;
     margin: 0 auto !important;
-    width: 300px !important;
+    /*width: 300px !important;*/
 }
 
 .mfa-footer {
@@ -68,7 +68,7 @@
     width: 300px !important;
 }
 .mfa-tit-tips {
-    margin: 40px 0px 20px 0 !important;
+    /*margin: 40px 0px 20px 0 !important;*/
 }
 .mfa-auth-otp {
     border: 1px solid #dcdcdc !important;
