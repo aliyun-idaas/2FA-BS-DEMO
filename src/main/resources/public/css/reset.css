@@ -98,8 +98,8 @@
 
 /*短信认证的样式覆盖*/
 .mfa-auth-container .mfa-btn-box {
-    top: 162px !important;
-    right: 50px !important;
+    top: 136px !important;
+    right: 0px !important;
 }
 #MFA_SEND_SMS_BTN {
     height: 36px !important;
