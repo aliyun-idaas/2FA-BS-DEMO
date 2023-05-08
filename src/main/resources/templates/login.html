@@ -30,14 +30,22 @@
                     <i class="input-suffix user-suffix"></i>
                     <input name="username" type="text" placeholder="请输入账户名" required="required"/>
                 </div>
-
+                
                 <div class="input-wrap">
                     <i class="input-suffix pwd-suffix"></i>
                     <input name="password" type="password" placeholder="请输入默认密码" required="required"/>
                 </div>
 
+                <div class="input-wrap">
+                    <i class="input-suffix phone-suffix"></i>
+                    <input name="phoneNumber" type="tel" maxlength="11" pattern="^(0|86|17951)?1[0-9]{10}"  placeholder="请输入手机号（非必填）"/>
+                </div>
 
-
+                 <div class="input-wrap">
+                    <i class="input-suffix email-suffix"></i>
+                    <input name="email" type="email" placeholder="请输入邮箱（非必填）"/>
+                </div>
+                
                 <input class="btn" type="submit" value="登 录"/>
             </form>
         </div>
