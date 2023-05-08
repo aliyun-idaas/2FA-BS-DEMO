@@ -31,6 +31,16 @@
     background: url("../img/password.png") center center no-repeat;
     background-size: auto 16px;
 }
+.input-wrap .phone-suffix {
+    background: url("../img/el-icon-phone-outline.png") 0px -1px no-repeat;
+    background-size: auto 30px;
+}
+
+.input-wrap .email-suffix {
+    background: url("../img/email.png") 0px -1px no-repeat;
+    background-size: auto 30px;
+}
+
 .input-wrap input {
     border: none;
     height: 36px;
